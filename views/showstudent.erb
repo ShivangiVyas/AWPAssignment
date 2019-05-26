@@ -1,8 +1,9 @@
 <h2> Student: <%=@student.firstname%> <%=@student.lastname%> </h2>
+<p> Student ID: <%=@student.studentid%> </p>
 <p> Birthday: <%=@student.birthday.strftime("%e %B %Y") if @student.birthday%> </p>
 <p> Address: <%=@student.address%> </p>
-<p> Student ID: <%=@student.studentid%> </p>
-<p> <a href="/students">Back to Students Index</a> </p>
+<p> Cell phone: <%=@student.cellno%>
+<p> <a href="/students">Back to Students Tab</a> </p>
 <p> <a href="/students/<%=@student.id%>/edit">Edit this Student Details here</a> </p>
 <form action="/students/<%=@student.id%>" method="POST">
   <input type="hidden" name="_method" value="DELETE">

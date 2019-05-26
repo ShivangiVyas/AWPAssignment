@@ -1,8 +1,8 @@
 <h2> Students </h2>
-<a href="/students/new">Create a new Student Record</a>
+<a href="/students/new">Create a new Student Record HERE</a>
 <br>
 <br>
-<h3> List of Students </h3>
+<h3> List of Students below:- </h3>
 <%if @students.any?%>
   <ul>
     <%@students.each do |student|%>
@@ -12,5 +12,5 @@
     <%end%>
   </ul>
 <%else%>
-  <p> No Student Records have been created yet! </p>
+  <p> Oops:( No Student Records have been created yet! </p>
 <%end%>
