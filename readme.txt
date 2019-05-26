@@ -1,10 +1,17 @@
 Name : Shivangi Vyas
-ID : W1536926
+Santa Clara University ID : W1536926
 
-Website developed using sinatra framework where we can add, delete and edit student information
+The Website developed using Sinatra framework where we can add, delete and edit student information and add comments as well as edit them.
+Credentials to login to website:
+username: shivangi     
+password: shivu123    
+
+Website URL:-
+https://awpassignment2.herokuapp.com/
+
 
 https://dashboard.heroku.com/apps/awpassignment2/deploy/github
 
-credentials to login to website:
-username: shivangi     
-password: shivu123     
+
+
+ 
