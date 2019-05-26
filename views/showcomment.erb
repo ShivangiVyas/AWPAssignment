@@ -1,8 +1,8 @@
+<h2> Name: <%=@comment.name%> </h2>
 <h2> Comment: <%=@comment.comment%> </h2>
-<p> Name: <%=@comment.name%> </p>
 <p> Created At: <%=@comment.created_at%> </p>
 <p> Updated At: <%=@comment.updated_at%> </p>
-<p> <a href="/comments">Back to Comments Index</a> </p>
+<p> <a href="/comments">Back to Comments Tab</a> </p>
 <p> <a href="/comments/<%=@comment.cid%>/edit">Edit this Comment:)</a> </p>
 <form action="/comments/<%=@comment.cid%>" method="POST">
   <input type="hidden" name="_method" value="DELETE">
