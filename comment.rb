@@ -41,45 +41,45 @@ end
 
 get '/comments/new' do
   comment = Comment.new
-  erb :new_comment
+  erb :newcomment
 end
 
-#Route for the new comment form
+#New comment form
 get '/comments/new' do
   halt(401, 'Not Authorized, Please go back login') unless session[:admin]
   @comment = Comment.new
-  erb :new_comment
+  erb :newcomment
 end
 
-#Shows a single comment
+#Single comment
 get '/comments/:cid' do
   @comment = Comment.get(params[:cid])
   #erb :show_comment
   if session[:admin] == true
-    erb :show_comment, :layout => :display2
+    erb :showcomment, :layout => :display2
   else
-    erb :show_comment, :layout => :layout
+    erb :showcomment, :layout => :layout
   end
 end
-#Route for the form to edit a single comment
+#Editing a single comment
 get '/comments/:cid/edit' do
   halt(401, 'Not Authorized, Please go back login') unless session[:admin]
   @comment = Comment.get(params[:cid])
   #erb :edit_comment
   if session[:admin] == true
-    erb :edit_comment, :layout => :display2
+    erb :editcomment, :layout => :display2
   else
-    erb :edit_comment, :layout => :layout
+    erb :editcomment, :layout => :layout
   end
 end
-#Creates new comment
+#Creating a new comment
 post '/comments' do
   halt(401, 'Not Authorized') unless session[:admin]
   @comment = Comment.create(params[:comment])
   redirect to('/comments')
 end
 
-#Edits a single student
+#Editing a single student
 put '/comments/:cid' do
   halt(401, 'Not Authorized') unless session[:admin]
   @comment = Comment.get(params[:cid])

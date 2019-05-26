@@ -79,9 +79,9 @@ get '/students/:id' do
   @student = Student.get(params[:id])
   #erb :show_student
   if session[:admin] == true
-    erb :show_student, :layout => :display2
+    erb :showstudent, :layout => :display2
   else
-    erb :show_student, :layout => :layout
+    erb :showstudent, :layout => :layout
   end
 end
 
@@ -91,9 +91,9 @@ get '/students/:id/edit' do
   @student = Student.get(params[:id])
   #erb :edit_student
   if session[:admin] == true
-    erb :edit_student, :layout => :display2
+    erb :editstudent, :layout => :display2
   else
-    erb :edit_student, :layout => :layout
+    erb :editstudent, :layout => :layout
   end
 end
 
